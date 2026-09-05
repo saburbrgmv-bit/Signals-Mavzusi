@@ -1,0 +1,6 @@
+<form action="{% url 'delete' post.pk %}" method="POST">
+    {% csrf_token %}
+    <p>are you sure delete "{{ post.title }}"?</p>
+    <button type="submit">Delete</button>
+    <a href="{% url 'login' %}">Cancel</a>
+</form>
